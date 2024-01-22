@@ -1,0 +1,35 @@
+@import './layout/sidebar';
+@import './layout/content';
+@import './views/home';
+@import './components/search';
+@import './components/dropdown';
+@import './components/create-user';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  color: #2c3e50;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+.layout-wrapp {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}

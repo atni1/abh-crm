@@ -1,0 +1,42 @@
+input[type="search"]::-webkit-search-clear-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+input[type="search"]::-ms-clear {
+  display: none;
+}
+
+.search {
+  position: relative;
+  &-input {
+    width: 245px;
+    height: 38px;
+    border-radius: 20px;
+    border: 1px solid #c1c1c1;
+    padding: 8px 15px;
+  
+    &:focus {
+      outline: 1px solid #959595;
+    }
+  }
+
+  &-btn {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    cursor: pointer;
+    outline: none;
+
+    &:active {
+      transform: scale(0.8);
+    }
+
+  } 
+  .cansel {
+    top: 10px;
+  }
+}

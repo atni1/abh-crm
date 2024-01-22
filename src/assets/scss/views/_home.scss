@@ -1,0 +1,108 @@
+.home {
+  margin: 50px 40px 0 40px;
+  height: 100%;
+}
+
+
+.filter {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.table {
+  overflow-y: scroll;
+  height: 84%;
+  padding-right: 10px;
+
+  &-header {
+    background: #e0e0e0;
+    border-radius: 20px;
+    padding: 8px 15px;
+    display: grid;
+    flex-grow: 1;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.2fr;
+    justify-content: center;
+    margin-bottom: 8px;
+    font-size: 12px;
+
+    &-element:not(:last-child) {
+      border-right: 1px solid #c1c1c1;
+    }
+  }
+
+  &-body {
+    .body-row {
+      background: #f4f4f4;
+      border-radius: 20px;
+      padding: 8px 15px;
+      display: grid;
+      flex-grow: 1;
+      align-items: center;
+      flex-wrap: wrap;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.2fr;
+      justify-content: center;
+      margin-bottom: 5px;
+
+      &-element:last-child {
+        display: flex;
+        justify-self: center;
+        .delete-btn {
+          border: none;
+          display: flex;
+          cursor: pointer;
+        }
+      }
+
+      &-element:first-child {
+        cursor: pointer;
+      }
+
+      &-element:not(:last-child) {
+        border-right: 1px solid #c1c1c1;
+      }
+
+      &:hover {
+        background: #ececec;
+      }
+    }
+  }
+}
+
+.table::-webkit-scrollbar {
+  width: 10px;
+  margin-right: 10px;
+}
+.table::-webkit-scrollbar-track {
+  background-color: transparent;
+  // width: 15px;
+}
+.table::-webkit-scrollbar-thumb {
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  border: 3px solid #f1f1f1;
+}
+
+.btn-add {
+  display: flex;
+  justify-content: flex-end;
+  .add-user {
+    margin-top: 20px;
+    border-radius: 12px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #080808;
+    background: transparent;
+    
+    svg {
+      rotate: 45deg;
+      width: 10px;
+      height: 10px;
+      margin-left: 10px;
+    }
+  }
+}

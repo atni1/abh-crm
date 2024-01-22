@@ -1,0 +1,53 @@
+.sidebar {
+  background: #0f2b46;
+  min-height: 100vh;
+  min-width: 200px;
+  width: 20%;
+  max-width: 20%;
+  
+  &-list {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    
+    &-element {
+      color: #fefefe;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      img {
+        margin-right: 15px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@keyframes underlineAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.sidebar-list-element:hover .sidebar-text {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0; // Initial width is 0
+    height: 2px; // Adjust the height of the underline
+    background-color: #e3ecf1; // Adjust the color of the underline
+    animation: underlineAnimation 0.5s forwards; // Adjust the animation duration
+  }
+}
